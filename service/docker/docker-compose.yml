@@ -1,32 +1,13 @@
 version: '2'
 services:
   postgres:
-    container_name: clair_postgres
+    container_name: adop-pipeline-builder
     restart: always
-    image: postgres:latest
-    networks:
-      - ${DOCKER_NETWORK_NAME}
-    environment:
-      POSTGRES_PASSWORD: password
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-
-  clair:
-    container_name: clair_clair
-    build: ./build 
-    restart: always
-    depends_on:
-      - postgres
+    image: adop-pipeline-builder:latest
     networks:
       - ${DOCKER_NETWORK_NAME}
     ports:
-      - "6060-6061:6060-6061"
-    links:
-      - postgres
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - /tmp:/tmp
-    command: [-config, /config/config.yaml]
+      - "80:3000/tcp"
 
 networks:
   local_network:
