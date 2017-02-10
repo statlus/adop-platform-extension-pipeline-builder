@@ -1,6 +1,6 @@
 version: '2'
 services:
-  postgres:
+  adop-pipeline-builder:
     container_name: adop-pipeline-builder
     restart: always
     image: robertnorthard/adop-pipeline-builder:latest
