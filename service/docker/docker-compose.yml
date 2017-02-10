@@ -6,8 +6,8 @@ services:
     image: robertnorthard/adop-pipeline-builder:latest
     networks:
       - ${DOCKER_NETWORK_NAME}
-    ports:
-      - "80:3000/tcp"
+    expose:
+      - "3000/tcp"
 
 networks:
   local_network:
