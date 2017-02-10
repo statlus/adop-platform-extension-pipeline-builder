@@ -3,7 +3,7 @@ services:
   postgres:
     container_name: adop-pipeline-builder
     restart: always
-    image: adop-pipeline-builder:latest
+    image: robertnorthard/adop-pipeline-builder:latest
     networks:
       - ${DOCKER_NETWORK_NAME}
     ports:
