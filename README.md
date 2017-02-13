@@ -1,20 +1,6 @@
-# Clair Platform Extension Specification
-The purpose of this repository is to define the docker-based [Clair](https://github.com/coreos/clair) platform extension specification.
-
-This extention is designed to support cartridges based on the [reference Docker pipeline](https://github.com/Accenture/adop-cartridge-docker).
+# Pipeline Build Platform Extension
+The purpose of this repository is to define the docker-based [Pipeline Builder](https://github.com/RobertNorthard/adop-pipeline-builder) platform extension specification.
 
 ## Stucture
-A platform specification is broken down into the following sections:
-
- * service
-  * This is to add more services to the platform.
-
-## Metadata
-Each cartridge should contain a "extension.metadata" file that specifies the following metadata:
-
- * `PLATFORM_EXTENSION_SDK_VERSION`
-  * This defines the version of the Cartridge SDK that the cartridge conforms to
- * `PLATFORM_EXTENSION_NAME`
-  * This is the name of the platform extension which should reflect the purpose of the extension.
- * `PLATFORM_EXTENSION_TYPE`
-  * This is the type of platform extension.
+This platform extension creates just one new service:
+ * The [pipeline builder](https://github.com/RobertNorthard/adop-pipeline-builder) which can be accessible at [http://apb.&lt;your IP address&gt;.nip.io](http://apb.&lt;your IP address&gt;.nip.io)
